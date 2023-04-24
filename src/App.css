@@ -1,0 +1,105 @@
+.outerBox {
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.firstText h3,
+.secondText h1,
+.thirdText h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.headerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 120px;
+  width: 100%;
+
+}
+
+.firstText {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: #70a6e3;
+  margin-top: 8px;
+  line-height: 1.333;
+}
+
+.secondText {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.255;
+  margin-bottom: -0.2rem;
+  display: block;
+}
+
+.thirdText {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #70a6e3;
+  padding: 4px;
+  margin: 18px;
+  letter-spacing: 0.2rem;
+  line-height: 26px;
+}
+
+.carouselBox {
+  width: 80%;
+}
+
+.product--image {
+  width: 100%;
+}
+
+.card {
+  padding: 30px;
+}
+
+.react-multiple-carousel__arrow {
+  display: none !important;
+}
+
+.react-multi-carousel-dot {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.react-multi-carousel-dot button {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  margin: 5px;
+  margin-bottom: 14px;
+  padding: 6px;
+  width: 8px;
+  height: 8px;
+}
+
+
+.react-multi-carousel-dot--active button {
+  background-color: #70a6e3;
+  border: 1px solid #70a6e3;
+  box-shadow: none;
+}
+
+.react-multi-carousel-dot button.react-multi-carousel-dot--active:before {
+  background-color: #70a6e3;
+}
+
+@media only screen and (max-width: 768px) {
+  .outerBox {
+    flex-direction: column;
+    align-items: center;
+  }
+}
