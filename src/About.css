@@ -1,0 +1,109 @@
+@media only screen and (max-width: 768px) {
+  .about {
+    flex: auto;
+
+  }
+}
+
+body {
+  background: #000;
+}
+
+.about {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  line-height: 1.75;
+  text-align: justify;
+  flex: auto;
+
+}
+
+
+.head {
+  max-width: 400px;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+  line-height: 12px;
+  color: white;
+}
+
+.topbox h1 {
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  padding-top: 35px;
+}
+
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  margin: 0px;
+
+}
+
+.grid-item h3 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.grid-item {
+  text-align: justify;
+  padding: 10px;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 20px;
+  padding-left: 2px;
+  border-left: 1px solid gray;
+}
+
+.col-block .stats__col {
+  width: 50%;
+}
+
+.stats__col {
+  margin: 5.4rem 0;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid gray;
+}
+
+.stats__col:last-child {
+  border-right: none;
+}
+
+.count {
+  text-align: center;
+  font-size: 50px;
+  font-family: "montserrat-bold", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.col-block h5 {
+  text-align: center;
+  font-family: "montserrat-bold", sans-serif;
+  margin-top: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.333;
+  position: relative;
+
+}

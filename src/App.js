@@ -5,7 +5,7 @@ import './App.css';
 // Import the JavaScript file that creates the loader element
 import "./loader.js";
 
-import HomePage from "./Home";
+import AboutPage from "./About";
 import EventsList from "./eventList";
 import { eventDetails, responsive } from "./eventData";
 
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <HomePage />
+      <AboutPage />
       <div className="outerBox">
         <div className="headerBox">
           <div className="firstText">
