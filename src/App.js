@@ -7,6 +7,7 @@ import "./loader.js";
 
 import AboutPage from "./About";
 import EventsList from "./eventList";
+import ContactUs from "./Contact";
 import { eventDetails, responsive } from "./eventData";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           </div>
         </div>
       </div>
+    <ContactUs />
     </div>
   );
 }
