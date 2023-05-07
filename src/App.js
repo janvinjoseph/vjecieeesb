@@ -8,6 +8,7 @@ import "./loader.js";
 import AboutPage from "./About";
 import EventsList from "./eventList";
 import { eventDetails, responsive } from "./eventData";
+import Team from './Team/Team';
 
 function App() {
   const event = eventDetails.map(item => (
@@ -43,6 +44,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Team />
     </div>
   );
 }
