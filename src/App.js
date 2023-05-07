@@ -3,21 +3,17 @@ import './App.css';
 // Import the JavaScript file that creates the loader element
 import "./loader.js";
 
-<<<<<<< HEAD
 import AboutPage from "./About";
 import EventsList from "./eventList";
 import ContactUs from "./Contact";
 import { eventDetails, responsive } from "./eventData";
-=======
 import Events from './Events/Events';
 import AboutPage from './About';
->>>>>>> cb3f7d781c20fc0a22c05937f0a0e90474c55199
 
 function App() {
   return (
     <div>
       <AboutPage />
-<<<<<<< HEAD
       <div className="outerBox">
         <div className="headerBox">
           <div className="firstText">
@@ -45,9 +41,6 @@ function App() {
         </div>
       </div>
     <ContactUs />
-=======
-      <Events />
->>>>>>> cb3f7d781c20fc0a22c05937f0a0e90474c55199
     </div>
   );
 }
