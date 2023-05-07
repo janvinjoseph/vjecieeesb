@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import './Events.css'
 export default function EventsList(props) {
     return (
         <div className="card">

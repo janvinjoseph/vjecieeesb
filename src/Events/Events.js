@@ -1,24 +1,15 @@
 import React from 'react';
-import './App.css';
-// Import the JavaScript file that creates the loader element
-import "./loader.js";
-
-<<<<<<< HEAD
-import AboutPage from "./About";
-import EventsList from "./eventList";
-import ContactUs from "./Contact";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import './Events.css';
+import EventsList from './eventList';
 import { eventDetails, responsive } from "./eventData";
-=======
-import Events from './Events/Events';
-import AboutPage from './About';
->>>>>>> cb3f7d781c20fc0a22c05937f0a0e90474c55199
-
-function App() {
-  return (
-    <div>
-      <AboutPage />
-<<<<<<< HEAD
-      <div className="outerBox">
+function Events(){
+    const event = eventDetails.map(item => (
+        <EventsList name={item.name} url={item.imgurl} discription={item.discription} />
+      ));
+    return(
+        <div className="outerBox">
         <div className="headerBox">
           <div className="firstText">
             <h3>FUN & ACTIVITIES</h3>
@@ -33,7 +24,7 @@ function App() {
             <Carousel
               responsive={responsive}
               autoPlay={true}
-              autoPlaySpeed={2500}
+              autoPlaySpeed={1700}
               infinite={true}
               transitionDuration={500}
               showDots={true}
@@ -44,13 +35,6 @@ function App() {
           </div>
         </div>
       </div>
-    <ContactUs />
-=======
-      <Events />
->>>>>>> cb3f7d781c20fc0a22c05937f0a0e90474c55199
-    </div>
-  );
+    )
 }
-
-export default App
-
+export default Events;
