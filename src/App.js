@@ -3,13 +3,13 @@ import './App.css';
 // Import the JavaScript file that creates the loader element
 import "./loader.js";
 
-import HomePage from "./Home";
 import Events from './Events/Events';
+import AboutPage from './About';
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <AboutPage />
       <Events />
     </div>
   );
