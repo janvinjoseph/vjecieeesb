@@ -1,0 +1,147 @@
+
+.container {
+  width: auto;
+  background-color: white;
+  padding: 20px;
+  display: grid;
+  justify-items: center;
+}
+
+.main-heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 30px;
+  color:black;
+  font-family: sans-serif;
+}
+
+.main-heading span {
+  padding:10px;
+  display: inline-block;
+  position: relative;
+}
+
+.main-heading span:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ff5a5f;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 30px;
+  color:black;
+}
+
+.society {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  display: table-row;
+  align-items: center;
+  background-color: white;
+}
+
+.society img {
+
+  width: 200px;
+  margin-right: 10px;
+}
+
+.society-text {
+  color:grey;
+  font-size: 20px;
+  width: 100%;
+}
+
+.society-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.society p {
+  margin: 0;
+}
+
+.society-text {
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.society-text h2 {
+  margin: 0;
+}
+
+.society-text p {
+  margin-top: 10px;
+}
+
+.society hr {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.society img {
+  width: 50%;
+  height: auto;
+}
+
+
+
+
+.society-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.society-text h2 {
+  margin: 0;
+}
+
+.society-text p {
+  margin-top: 10px;
+}
+
+.society hr {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+span.underline {
+  font-size: 60px;
+  width: 60%;
+  border-bottom: 4px solid grey;
+  display:block;
+}
+.new{
+  width: 100%;
+  display: row;
+}
+span.underline2{
+  padding: 30px;
+  font-size: 60px;
+  width: 100%;
+  border-bottom: 2px solid grey;
+  display:block;
+}
