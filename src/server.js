@@ -19,8 +19,8 @@ app.post('/send-email', (req, res) => {
     port: 587,
     secureConnection: false, // Set to true if using a secure connection (TLS/STARTTLS)
     auth: {
-      user: 'janvinjoseph@outlook.com', // Replace with your Outlook email address
-      pass: 'Janvin@2001', // Replace with your Outlook password or app-specific password
+      user: 'aman@outlook.com', // Replace with your Outlook email address
+      pass: 'oksghjk', // Replace with your Outlook password or app-specific password
     },
     tls: {
       ciphers: 'SSLv3', // Option 1: Use SSLv3 cipher (if required by your Outlook account)
@@ -30,8 +30,8 @@ app.post('/send-email', (req, res) => {
 
   // Define the email options
   const mailOptions = {
-    from: 'janvinjoseph@outlook.com', // Replace with your email address
-    to: email, // Replace with the recipient's email address
+    from: email, // Replace with your email address
+    to: 'janvinjoseph@outlook.com', // Replace with the recipient's email address
     subject: '',
     text: `
       Name: ${name}

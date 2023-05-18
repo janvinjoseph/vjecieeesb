@@ -4,6 +4,7 @@ import './App.css';
 import "./loader.js";
 
 import ContactUs from './footer/Contact';
+import Team from './teams/team';
 import Society from './Society/Society';
 import Events from './Events/Events';
 import AboutPage from './About';
@@ -16,6 +17,7 @@ function App() {
 
 
       <Society />
+      <Team />
 
       <Events />
       <ContactUs />
