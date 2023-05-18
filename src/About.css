@@ -6,13 +6,13 @@
 }
 
 body {
-  background: #000;
+  background: #4309f2;
 }
 
 .about {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(3, 28, 50);
   line-height: 1.75;
   text-align: justify;
   flex: auto;

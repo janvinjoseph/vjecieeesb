@@ -5,6 +5,7 @@
   padding: 20px;
   display: grid;
   justify-items: center;
+  transition-delay: 0ms;
 }
 
 .main-heading {
