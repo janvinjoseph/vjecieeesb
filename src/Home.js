@@ -1,12 +1,17 @@
 import React from 'react';
+import ParticleBackground from './components/particlebackground';
 import './Home.css';
+import videoBackground from './your-video.mp4';
+
 function HomePage() {
   return (
-    
     <div>
+      {/* Render the ParticleBackground component */}
+      <ParticleBackground />
+
       {/* Header */}
       <header className="header">
-      <img src="IEEE-Logo.jpg" alt="IEEE Logo" className="logo" />
+        <img src="IEEE-Logo.jpg" alt="IEEE Logo" className="logo" />
         <nav>
           <ul>
             <li><a href="/">HOME</a></li>
@@ -22,7 +27,10 @@ function HomePage() {
 
       {/* Hero Section */}
       <section className="hero">
-        
+        <video className="hero-video" autoPlay loop muted>
+          <source src={videoBackground} type="video/mp4" />
+        </video>
+
         <div className="comp">
           <h3 className='hthree'>IEEE SB VJEC</h3>
           <a href="/Events" className="event-button">EVENTS</a>
@@ -30,9 +38,7 @@ function HomePage() {
           <h1 className='hone'>Your future of better learning starts here...</h1>
         </div>
       </section>
-</div>
-
-   
+    </div>
   );
 }
 

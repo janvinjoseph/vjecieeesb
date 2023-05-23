@@ -1,106 +1,120 @@
-/* Home.css */
-
 body {
-    background-color: #020538;
-    min-height: 200vh;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100px;
-    background-color: #020432;
-    color: #fff;
-    padding: 0 22px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a:hover {
-    color: #cccccc;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    height: calc(100vh - 100px);
-    position: relative;
-  }
-  
-  .logo {
-    width: 200px;
-    position: absolute;
-    top: 15px;
-    left: 35px;
-    z-index: 2;
-  }
-  
-  .hthree {
-    width: 200px;
-    position: absolute;
-    top: 4px;
-    left: 35px;
-    z-index: 1;
-  }
-  .hone{
-    width:500px;
-    height:800px;
-    position: absolute;
-    top: 210px;
-    left: 35px;
-    font-size: 60px;
-  }
-  .event-button {
-    background-color: #241f39;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    margin-bottom: 1rem;
-    left: 30px;
-    top:215px;
-    position: absolute;
-  }
-  .hfour{
-    font-size: 30px;
-    position: absolute;
-    top:120px;
-    left:35px;
-  }
-  .hero {
-    background: url('./Network.webm') no-repeat center;
-        /* other properties */
+  background-color: #02042e;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Add this line to hide horizontal scroll bar */
 }
-.logotwo{
-    width: 100px;
-    position: relative;
-    top: 50px;
-    left: 340px;
-    z-index: 2;
+
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100px;
+  background-color: #01031e;
+  color: #fff;
+  padding: 0 22px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a:hover {
+  color: #cccccc;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  overflow: hidden; /* Add this line to hide vertical scroll bar */
+}
+
+
+.logo {
+  width: 200px;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  z-index: 2;
+}
+
+.hthree {
+  width: 200px;
+  position: absolute;
+  top: 4px;
+  left: 35px;
+  z-index: 1;
+}
+.hone{
+  width:500px;
+  height:800px;
+  position: absolute;
+  top: 210px;
+  left: 35px;
+  font-size: 60px;
+}
+.event-button {
+  background-color: #241f39;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  left: 30px;
+  top:215px;
+  position: absolute;
+}
+.hfour{
+  font-size: 30px;
+  position: absolute;
+  top:120px;
+  left:35px;
 }
 .hero {
-    background-image: url('./23324.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-      
-  
+  background: url('./Network.webm') no-repeat center;
+      /* other properties */
+}
+.logotwo{
+  width: 100px;
+  position: relative;
+  top: 50px;
+  left: 340px;
+  z-index: 2;
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+    
