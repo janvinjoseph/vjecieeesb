@@ -33,7 +33,7 @@ body {
   top: 160px;
   right: -90px;
   margin-top: -90px;
-  padding:1px;
+  padding: 1px;
 }
 
 .map {
@@ -54,7 +54,7 @@ form {
   padding: 100px;
   position: relative;
   right: -10px;
-  display:inline-flexbox;
+  display: inline-flexbox;
 }
 
 .feedback-input {
@@ -83,6 +83,18 @@ textarea {
   line-height: 150%;
   resize: horizontal;
 }
+.alert {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  margin: 15px auto;
+  margin-top: -30px;
+  border-radius: 4px;
+  font-size: 14px;
+  
+}
 
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -106,6 +118,7 @@ textarea {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+
   /* Adjust styles for smaller screens */
   .contact-container {
     flex-direction: column;

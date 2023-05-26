@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import './Contact.css';
 
 function ContactUs() {
+  const [showAlert, setShowAlert] = useState(false);
+  let timeoutId;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.text.value;
+
+    try {
+      const response = await axios.post('http://localhost:3001/send-email', {
+        name,
+        email,
+        message,
+      });
+
+      if (response.status === 200) {
+        event.target.reset();
+        setShowAlert(true);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setShowAlert(false);
+        }, 3000);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <link rel="stylesheet" href="/Contact.css"></link>
@@ -22,8 +52,8 @@ function ContactUs() {
             <p>Agil Mathew: 9207651172</p>
             <p>Prabin: 9400590235</p>
           </div>
-          <form className='form' action="http://localhost:3001/send-email" method="POST">
-          <h2>Leave a Message</h2>
+          <form className='form' onSubmit={handleSubmit}>
+            <h2>Leave a Message</h2>
             <input name="name" type="text" className="feedback-input" placeholder="Name" />
             <input name="email" type="text" className="feedback-input" placeholder="Email" />
             <textarea name="text" className="feedback-input" placeholder="Comment"></textarea>
@@ -34,9 +64,11 @@ function ContactUs() {
           </div>
         </div>
       </section>
+      {showAlert && (
+        <div className="alert">Mail sent successfully!</div>
+      )}
     </div>
   );
 }
 
 export default ContactUs;
-
