@@ -1,58 +1,48 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
 const app = express();
-const port = 3001; // Choose the port number you want to use
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
-// Middleware to parse incoming request bodies
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-// Define a route to handle the form submission
 app.post('/send-email', (req, res) => {
-  // Extract form data from the request body
-  const { name, email, text } = req.body;
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
 
-  // Create a transporter with your email transport options
+  // Create a Nodemailer transporter
   const transporter = nodemailer.createTransport({
-    host: 'smtp-mail.outlook.com',
-    port: 587,
-    secureConnection: false, // Set to true if using a secure connection (TLS/STARTTLS)
+    // Replace with your email service provider and credentials
+    service: 'gmail',
     auth: {
-      user: 'aman@outlook.com', // Replace with your Outlook email address
-      pass: 'oksghjk', // Replace with your Outlook password or app-specific password
-    },
-    tls: {
-      ciphers: 'SSLv3', // Option 1: Use SSLv3 cipher (if required by your Outlook account)
-      rejectUnauthorized: false, // Option 2: Disable certificate verification
+      user: 'mail',
+      pass: 'app password',
     },
   });
 
-  // Define the email options
+  // Set up the email data
   const mailOptions = {
-    from: email, // Replace with your email address
-    to: 'janvinjoseph@outlook.com', // Replace with the recipient's email address
-    subject: '',
-    text: `
-      Name: ${name}
-      Email: ${email}
-      Comment: ${text}
-    `,
+    from: email,
+    to: 'recipient mail', // Replace with the recipient email address
+    subject: 'New Message from Contact Form',
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.log(error);
-      res.status(500).send('Failed to send email');
+      console.error(error);
+      res.status(500).send('Failed to send email.');
     } else {
-      console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
+      console.log('Email sent:', info.response);
+      res.status(200).send('Email sent successfully!');
     }
   });
 });
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(3001, () => {
+  console.log('Server started on port 3001');
 });
