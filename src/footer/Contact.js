@@ -10,7 +10,7 @@ function ContactUs() {
 
     const name = event.target.name.value;
     const email = event.target.email.value;
-    const message = event.target.text.value;
+    const message = event.target.message.value;
 
     try {
       const response = await axios.post('http://localhost:3001/send-email', {
@@ -56,7 +56,7 @@ function ContactUs() {
             <h2>Leave a Message</h2>
             <input name="name" type="text" className="feedback-input" placeholder="Name" />
             <input name="email" type="text" className="feedback-input" placeholder="Email" />
-            <textarea name="text" className="feedback-input" placeholder="Comment"></textarea>
+            <textarea name="message" className="feedback-input" placeholder="Comment"></textarea>
             <input type="submit" value="SUBMIT" />
           </form>
           <div className="map-container">
